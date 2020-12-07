@@ -8,17 +8,17 @@ def test_function(entry):
 	print("This is the entry:", entry)
 
 
-def format_response(weather):
+def printing(weather):
 	try:
 		name = weather['name']
 		desc = weather['weather'][0]['description']
 		temp = weather['main']['temp']
 
-		final_str = 'City: %s \nConditions: %s \nTemperature (°F): %s' % (name, desc, temp)
+		response = 'City: %s \nConditions: %s \nTemperature (°F): %s' % (name, desc, temp)
 	except:
-		final_str = 'There was a problem retrieving that information'
+		response = 'There was a problem retrieving that information'
 
-	return final_str
+	return response
 
 def get_weather(city):
 	weather_key = 'a4aa5e3d83ffefaba8c00284de6ef7c3'
